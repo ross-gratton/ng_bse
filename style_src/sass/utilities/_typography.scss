@@ -1,0 +1,38 @@
+/*//////////////////////////////////////////////////////////////////////////////
+|| Modifiers
+//////////////////////////////////////////////////////////////////////////////*/
+
+	/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	|| Modification Classes
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+	.uppercase{ text-transform: uppercase; }
+	.nb, .subscript{ font-size: 0.8em; }
+	.nowrap{ white-space: nowrap; }
+	.italic, i{
+		font-style: italic;
+	}
+
+	/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	|| Size Modification Classes
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+	@for $i from 0 through 40 {
+		$decimal: $i * 0.10;
+
+		$floored: floor($decimal);
+		$diff: floor(($decimal - $floored) * 10);
+		$string: "#{$floored}-#{$diff}";
+
+		.fs-#{$string}{ font-size: #{$decimal}em; }
+	}
+	/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	|| Line height modification
+	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+	@for $i from 0 through 40 {
+		$decimal: $i * 0.10;
+
+		$floored: floor($decimal);
+		$diff: floor(($decimal - $floored) * 10);
+		$string: "#{$floored}-#{$diff}";
+
+		.lh-#{$string}{ line-height: #{$decimal}; }
+	}

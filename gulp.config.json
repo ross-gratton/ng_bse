@@ -1,0 +1,32 @@
+{
+    "version":"1_0_0",
+    "project": "ng_bse",
+
+    "direction": "ltr",
+    "lang": "en",
+
+    "requires":{
+        "local_icons": true,
+        "local_images": true
+    },
+
+    "env":{
+        "sources": {
+            "local":{
+                "base": "style_src/",
+                "sass": "sass/",
+                "fonts": "fonts/",
+                "images": "images/",
+                "icons": "icons/"
+            },
+            "app":{
+                "base": "src/app/"
+            }
+        },
+        "build": {
+            "base": "src/assets/",
+            "fonts": "fonts/",
+            "images": "images/"
+        }
+    }
+}
