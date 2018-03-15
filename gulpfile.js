@@ -55,7 +55,6 @@ var sass = require('gulp-ruby-sass'),
             }))
             .pipe(cssnano({ zindex: false }))
             .pipe(sourcemaps.write())
-            .pipe(gulp.dest("."));
             .pipe(gulp.dest(function(file) {
                 return file.base;
             }));
